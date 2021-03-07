@@ -10,6 +10,7 @@ body{
   }
 /*creating nav bar */
   .topnav {
+    display: flex
     list-style-type: none;
     margin: 0;
     padding: 0;
