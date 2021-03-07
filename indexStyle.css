@@ -37,8 +37,8 @@ body{
   }
 
 
-/* sunflowers pic */
-.flowers {
+/* book pic */
+.book {
     width: 1200px;
     height:600px;
     background-image:  url("images/book.jpg");
@@ -54,7 +54,7 @@ body{
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,900");
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
-.flowers h1 {
+.book h1 {
     color: white;
     font-family: 'Brush Script MT', cursive; /*editing font */
     font-weight: 800;
