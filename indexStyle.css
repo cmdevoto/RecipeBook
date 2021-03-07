@@ -1,0 +1,68 @@
+
+/* Style background color*/
+body{
+    background-color: #EEE2DC;
+}
+
+/* style list for navigation bar */
+  li {
+    display: inline;
+  }
+/*creating nav bar */
+  .topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #EDC7B7; 
+    overflow: hidden;
+    text-align: center;
+    
+  }
+/* more coloring on nav bar*/
+  .topnav a {
+    float: left;
+    color: rgb(116, 61, 87);
+    text-align: center;
+    padding: 10px 40px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    float: none;
+  }
+
+  /* Change color of hovering link*/
+  .topnav a:hover {
+    font-weight: bold;
+    color: white;
+  }
+
+
+/* sunflowers pic */
+.flowers {
+    width: 1200px;
+    height:600px;
+    background-image:  url("images/book.jpg");
+    background-size: cover; /* or contain depending on what you want */
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+}
+/* importing fonts to style */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,900");
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.flowers h1 {
+    color: white;
+    font-family: 'Brush Script MT', cursive; /*editing font */
+    font-weight: 800;
+    margin: 0;
+    font-size: 10rem;
+    letter-spacing: 5px;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
