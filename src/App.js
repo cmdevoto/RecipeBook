@@ -4,7 +4,7 @@ import {
 } from "https://unpkg.com/htm/preact/standalone.module.js";
   
 import { Header } from "./components/Header.js";
-import { Recipe } from "./components/Recipe.js"
+import { Recipe } from "./components/Recipe.js";
 //import axios from "axios";
   
 // use axios to do get request on json
@@ -37,12 +37,12 @@ export default LearnService
 
 // create recipe list component
 
-  function App() {
+  function App() { 
     return html`
       <${Header} title="RecipeList">
         Welcome to your recipe booklet
       </${Header}>
-      <${Recipe} name="recipe", ingredients="water", steps="stir", imgPath="../public/images.focaccia.JPG">
+      <${Recipe} name="focaccia" ingredients="water" steps="stir" imgPath="../public/images/focaccia.JPG">
       </${Recipe}>
     `;
   }
