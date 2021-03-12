@@ -12,7 +12,7 @@ const axios = window.axios;
 axios.get('src/recipes.json')
   .then(function (response) {
     // handle success
-    console.log(response);
+    console.log(response.data);
   })
   .catch(function (error) {
     // handle error
@@ -21,6 +21,7 @@ axios.get('src/recipes.json')
   .then(function () {
     // always executed
   });
+
 //import axios from "axios";
   
 // use axios to do get request on json
