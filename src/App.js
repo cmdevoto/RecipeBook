@@ -8,20 +8,22 @@ import { Recipe } from "./components/Recipe.js";
 
 const axios = window.axios;
 
-
-axios.get('src/recipes.json')
-  .then(function (response) {
-    // handle success
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .then(function () {
-    // always executed
-  });
-
+function axiosTest(){
+  axios.get('src/recipes.json')
+    .then(function (response) {
+      // handle success
+      console.log(response.data);
+      return response.data
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .then(function () {
+      // always executed
+    });
+}
+const axiosTestResult = axiosTest(); 
 //import axios from "axios";
   
 // use axios to do get request on json
