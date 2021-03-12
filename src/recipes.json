@@ -30,7 +30,8 @@
             "notes" : [
                 "Made with just rosemary and garlic and it was delicious!"
             ],
-            "type" : "miscellaneous"
+            "type" : "miscellaneous",
+            "imgPath" : "../public/images/focaccia.JPG"
         },
         {
             "id" : 2,
@@ -54,7 +55,8 @@
             "notes" : [
                 "Next time, I would bake longer covered and shorter uncovered."
             ],
-            "type" : "miscellaneous"
+            "type" : "miscellaneous",
+            "imgPath" : "../public/images/sourdough.jpeg"
         },
         {
             "id" : 3,
@@ -78,7 +80,8 @@
             "notes" : [
                 "Make sure to put whatever you are baking the pizza on in the oven while it preheats."
             ],
-            "type" : "miscellaneous"
+            "type" : "miscellaneous",
+            "imgPath" : "../public/images/pizzaDough.jpeg"
         }
 
     ]
