@@ -5,6 +5,8 @@ import {
   
 import { Header } from "./components/Header.js";
 import { Recipe } from "./components/Recipe.js";
+
+const axios = window.axios;
 //import axios from "axios";
   
 // use axios to do get request on json
@@ -38,6 +40,8 @@ export default LearnService
 // create recipe list component
 
   function App() { 
+    console.log(axios);
+    
     return html`
       <${Header} title="RecipeList">
         Welcome to your recipe booklet
