@@ -6,13 +6,6 @@ import {
 // Recipe Component -- the picture, recipe, ingredients, steps
 // in the future, we'd like to have just the picture and the name with a button to go to that recipe page
 export function Recipe( {name, ingredients, steps, imgPath} ) {
-    const mystyle = {
-        color: "white",
-        backgroundColor: "DodgerBlue",
-        padding: "10px",
-        fontFamily: "Arial",
-        textAlign : 'right' 
-    };
     const recipeList = {
         fontSize: "15px"
     };
@@ -22,8 +15,9 @@ export function Recipe( {name, ingredients, steps, imgPath} ) {
         border: '1px solid #1a202c' 
     };
     const stepStyle = {
-        fontSize: "20px",
-        fontFamily: "Arial" 
+        fontSize: "15px",
+        fontFamily: "Arial", 
+        border: '1px solid #1a202c'
     };
     
     return html`
