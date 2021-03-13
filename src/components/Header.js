@@ -8,10 +8,16 @@ import {
       document.title = title;
     }, [title]);
   
-    
+    const mystyle = {
+        color: "white",
+        backgroundColor: "DodgerBlue",
+        padding: "10px",
+        fontFamily: "Arial"
+      };
+
     return html`
       <header>
-        <h1>${title}</h1>
+        <h1 style=${mystyle}>${title}</h1>
         ${children}
       </header>
     `;
