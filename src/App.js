@@ -40,8 +40,6 @@ console.log("test")
         });
     });
 
-
-
     return html`
       <${Header} title="RecipeList">
         Welcome to your recipe booklet
