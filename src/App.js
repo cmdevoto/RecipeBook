@@ -1,63 +1,46 @@
 import {
     html,
-    render
+    render,
+    useState,
+    useEffect
 } from "https://unpkg.com/htm/preact/standalone.module.js";
   
 import { Header } from "./components/Header.js";
 import { Recipe } from "./components/Recipe.js";
 
-const axios = window.axios;
+//const axios = window.axios;
 
-function axiosTest(){
+
+function getRecipes(){
   axios.get('src/recipes.json')
     .then(function (response) {
       // handle success
       console.log(response.data);
-      return response.data
+      return response.data.data
     })
     .catch(function (error) {
       // handle error
       console.log(error);
-    })
-    .then(function () {
-      // always executed
-    });
+    });;
 }
-const axiosTestResult = axiosTest(); 
-//import axios from "axios";
-  
-// use axios to do get request on json
-// json file served through a class with axios in it
 
-/*
-const LearnService = () => {
-    let url = '';
-    const createRecipe = () => {
-        return axios({
-            method: 'get',
-            url: "recipes.json",
-            data:{
-                id,
-                name,
-                ingredients,
-                steps,
-                notes,
-                type,
-                imgPath
-            }
-        })
-    }
-};
-
-export default LearnService
-*/
-
-// nav bar (with or without destinations)
+console.log("test")
+//const axiosTestResult = getRecipes(); 
 
 // create recipe list component
 
   function App() { 
-    console.log(axios);
+    //create 2 recipe arrays and add them to the state using the useState hook
+    const [recipes, setRecipes] = useState([]);  
+
+    // the useEffect hook is used here to load user data asynchronously
+    useEffect(() => {
+      return getRecipes().then(function (data) {
+          setRecipes(data);
+        });
+    });
+
+
 
     return html`
       <${Header} title="RecipeList">
@@ -65,6 +48,14 @@ export default LearnService
       </${Header}>
       <${Recipe} name="focaccia" ingredients="water" steps="stir" imgPath="../public/images/focaccia.JPG">
       </${Recipe}>
+      <ul>
+      ${recipes.map(
+        (recipe) =>
+          html` <li key="${user}">
+            ${recipe.name} | ${recipe.ingredients} ${recipe.steps}
+          </li>`
+      )}
+      </ul>
     `;
   }
   
