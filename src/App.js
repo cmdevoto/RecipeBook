@@ -35,8 +35,9 @@ const testVar = console.log(getRecipes())
 
   function App() { 
     //create 2 recipe arrays and add them to the state using the useState hook
-    //const [recipes, setRecipes] = useState({name: 'test', ingredients: 'test', steps:'test', notes:'test', imgPath:'test' });  
-    const [recipes, setRecipes] = useState({})
+    const [recipes, setRecipes] = useState({name: 'test', ingredients: 'test', steps:'test', notes:'test', imgPath:'test' });  
+    //const [recipes, setRecipes] = useState({})
+
     // the useEffect hook is used here to load user data asynchronously
     useEffect(() => {
       return getRecipes().then(function (data) {
