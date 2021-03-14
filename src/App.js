@@ -8,24 +8,15 @@ import {
 import { Header } from "./components/Header.js";
 import { Recipe } from "./components/Recipe.js";
 
-//const axios = window.axios;
-
-
-function getRecipes(){
-  axios.get('src/recipes.json')
-    .then(function (response) {
-      // handle success
-      console.log(response.data);
-      return response.data.data
-    })
-    .catch(function (error) {
-      // handle error
-      console.log(error);
-    });;
+function getRecipes() {
+  const axios = window.axios;
+  return axios.get("src/recipes.json").then((response) => {
+      console.log(response.data.recipes);
+      return response.data.recipes;
+  });
 }
 
 console.log("test")
-//const axiosTestResult = getRecipes(); 
 
 // create recipe list component
 
@@ -34,10 +25,11 @@ console.log("test")
     const [recipes, setRecipes] = useState([]);  
 
     // the useEffect hook is used here to load user data asynchronously
+
     useEffect(() => {
-      return getRecipes().then(function (data) {
-          setRecipes(data);
-        });
+      return getRecipes().then((data) => {
+        setRecipes(data);
+      });
     });
 
     return html`
@@ -49,7 +41,7 @@ console.log("test")
       <ul>
       ${recipes.map(
         (recipe) =>
-          html` <li key="${user}">
+          html` <li key="${recipe}">
             ${recipe.name} | ${recipe.ingredients} ${recipe.steps}
           </li>`
       )}

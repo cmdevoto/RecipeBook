@@ -5,6 +5,7 @@ import {
 
 // Recipe Component -- the picture, recipe, ingredients, steps
 // in the future, we'd like to have just the picture and the name with a button to go to that recipe page
+
 export function Recipe( {name, ingredients, steps, imgPath} ) {
     const recipeList = {
         fontSize: "15px"
