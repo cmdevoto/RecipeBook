@@ -4,6 +4,7 @@ import {
 
 export function Nav(){
 
+    // css styling
     const navStyle = {
         display: "flex",
         flexFlow: "row wrap",
@@ -19,6 +20,9 @@ export function Nav(){
         fontFamily: "Nunito"
     }
 
+    // currently only have "back to homepage" -- refers to index.html
+    // will add other nav options in future features
+    
     return html `
         <ul style=${navStyle}>
             <li style=${navStyle2}> <a href="../../index.html">Back to Homepage</a> </li>

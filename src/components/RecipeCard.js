@@ -4,6 +4,9 @@ import {
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
+// this is currently not being used
+// would like to use this in the next feature -- syntax is from react-boostrap
+// ideally these cards will appear on the home page with the option to view the full recipe for each card
 
   export function RecipeCard( {name, description, img} ){
     return html`

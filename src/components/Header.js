@@ -10,6 +10,8 @@ import { Nav } from "./Nav.js";
       document.title = title;
     }, [title]);
   
+    // css styling for the header
+
     const mystyle = {
         color: "#6150FF",
         padding: "10px",
@@ -17,6 +19,10 @@ import { Nav } from "./Nav.js";
         textAlign: "center"
       };
 
+    // returning the html with inline css
+    // the fas fa-seedling is the seedling icon -- from fontawesome (index.html)
+    // nav bar is included in the header (they will always appear together)
+    
     return html`
       <header>
         <h1 style=${mystyle}>${title} <i class="fas fa-seedling"></i></h1>

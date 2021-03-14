@@ -8,21 +8,21 @@ import {
 import { Header } from "./components/Header.js";
 import { Recipe } from "./components/Recipe.js";
 
+
+// function to retrieve json data information -- logged when testing
 function getRecipes() {
   const axios = window.axios;
   return axios.get("src/recipes.json").then((response) => {
-    console.log(response.data.recipes);
+    //console.log(response.data.recipes);
     return response.data.recipes;
   });
 }
 
-console.log("test")
-
-
 function App() { 
-//create 2 recipe arrays and add them to the state using the useState hook
+  //create 2 recipe arrays and add them to the state using the useState hook
   const [recipes, setRecipes] = useState([]);  
 
+  // styling for things within the App function (body, forms)
   const bodyStyle = {
     backgroundColor: "#DBD7FF"
   }
@@ -37,7 +37,7 @@ function App() {
     border: "2px solid #3B26FF"
   }
 
-// the useEffect hook is used here to load user data asynchronously
+  // the useEffect hook is used here to load user data asynchronously
 
   useEffect(() => {
     return getRecipes().then((data) => {
@@ -45,6 +45,7 @@ function App() {
     });
   });
 
+  // returning html with inline css -- using Header and Recipe components
   return html`
     <body style=${bodyStyle}>
       <${Header} title="My Recipe Book">

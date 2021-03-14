@@ -8,6 +8,8 @@ import {
 
 export function Recipe( {name, ingredients, steps, imgPath} ) {
     
+    // css styling for all recipe components
+    
     const imgStyle = {
         display: "block",
         marginLeft: "auto",
@@ -36,6 +38,8 @@ export function Recipe( {name, ingredients, steps, imgPath} ) {
         fontFamily: "Lobster",
         fontSize: "20px"
     }
+
+    // returning the html with inline css
 
     return html`
         <h1 style=${nameStyle}>${name}</h1>
