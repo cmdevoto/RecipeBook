@@ -22,7 +22,8 @@ console.log("test")
 
   function App() { 
     //create 2 recipe arrays and add them to the state using the useState hook
-    const [recipes, setRecipes] = useState([]);  
+    const [recipes, setRecipes] = useState({name: 'test', ingredients: 'test', steps:'test', notes:'test', imgPath:'test' });  
+    //const [recipes, setRecipes] = useState({})
 
     // the useEffect hook is used here to load user data asynchronously
 
@@ -36,7 +37,7 @@ console.log("test")
       <${Header} title="RecipeList">
         Welcome to your recipe booklet
       </${Header}>
-      <${Recipe} name="focaccia" ingredients="water" steps="stir" imgPath="../public/images/focaccia.JPG">
+      <${Recipe}>
       </${Recipe}>
       <ul>
       ${recipes.map(
@@ -47,6 +48,7 @@ console.log("test")
       )}
       </ul>
     `;
+    
   }
   
   render(html` <${App} /> `, document.getElementById("app"));
