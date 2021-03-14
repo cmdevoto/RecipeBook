@@ -18,38 +18,38 @@ function getRecipes() {
 
 console.log("test")
 
-// create recipe list component
 
-  function App() { 
-    //create 2 recipe arrays and add them to the state using the useState hook
-    const [recipes, setRecipes] = useState([]);  
-    //const [recipes, setRecipes] = useState({})
+function App() { 
+  //create 2 recipe arrays and add them to the state using the useState hook
+  const [recipes, setRecipes] = useState([]);  
 
-    // the useEffect hook is used here to load user data asynchronously
+  const bodyStyle = {
+    backgroundColor: "#DBD7FF",
+  }
+  // the useEffect hook is used here to load user data asynchronously
 
-    useEffect(() => {
-      return getRecipes().then((data) => {
-        setRecipes(data);
-      });
+  useEffect(() => {
+    return getRecipes().then((data) => {
+      setRecipes(data);
     });
+  });
 
-    return html`
-      <${Header} title="RecipeList">
+  return html`
+    <body style=${bodyStyle}>
+      <${Header} title="My Recipe Book">
         Welcome to your recipe booklet
       </${Header}>
-      <${Recipe}>
-      </${Recipe}>
-      <ul>
+      
       ${recipes.map(
         (recipe) =>
           html` <li key="${recipe}">
-            ${recipe.name} | ${recipe.ingredients} ${recipe.steps}
+            <${Recipe} name=${recipe.name} ingredients=${recipe.ingredients} steps=${recipe.steps} imgPath=${recipe.imgPath} >
+            </${Recipe}>
           </li>`
       )}
-      </ul>
-    `;
-    
-  }
+    </body>
+    `; 
+}
   
   render(html` <${App} /> `, document.getElementById("app"));
   
