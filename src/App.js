@@ -68,7 +68,7 @@ function App() {
 
       ${recipes.map(
         (recipe) =>
-          html` <li key="${recipe}">
+          html` <li style="list-style-type:none" key="${recipe}">
             <${Recipe} name=${recipe.name} ingredients=${recipe.ingredients} steps=${recipe.steps} imgPath=${recipe.imgPath} >
             </${Recipe}>
           </li>`
