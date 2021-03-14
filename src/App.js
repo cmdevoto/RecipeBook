@@ -27,11 +27,16 @@ console.log("test")
 
     // the useEffect hook is used here to load user data asynchronously
 
+    /* Whole app styling*/
+    document.body.style.backgroundColor='rgb(' + 253 + ',' + 252 + ',' + 255 + ')';
+    //document.getElementById("pid").style.wordSpacing = "25px";
+    
     useEffect(() => {
       return getRecipes().then((data) => {
         setRecipes(data);
       });
     });
+
 
     return html`
       <${Header} title="RecipeList">

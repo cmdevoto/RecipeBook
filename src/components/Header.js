@@ -10,9 +10,10 @@ import {
   
     const mystyle = {
         color: "white",
-        backgroundColor: "DodgerBlue",
+        backgroundColor: 'rgb(' +163 + ',' + 192 + ',' + 230 + ')',
         padding: "10px",
-        fontFamily: "Arial"
+        fontFamily: "Georgia, serif",
+        letterSpacing: "5px"
       };
 
     return html`
