@@ -5,7 +5,7 @@ import {
   useEffect
 } from "https://unpkg.com/htm/preact/standalone.module.js";
 
-import { Header } from "./components/Header.js";
+import { Nav } from "./components/Nav.js";
 import { Recipe } from "./components/Recipe.js";
 
 
@@ -48,9 +48,7 @@ function App() {
   // returning html with inline css -- using Header and Recipe components
   return html`
     <body style=${bodyStyle}>
-      <${Header} title="My Recipe Book">
-        Welcome to your recipe booklet
-      </${Header}>
+      <${Nav}> </${Nav}>
 
       <p style=${formStyle}> Add New Recipe! </p>
       <form>

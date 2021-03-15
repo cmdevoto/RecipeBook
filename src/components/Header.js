@@ -2,9 +2,9 @@ import {
     html,
     useEffect
   } from "https://unpkg.com/htm/preact/standalone.module.js";
-
-import { Nav } from "./Nav.js";
   
+  // Header is the child component for Nav
+
   export function Header({ title }) {
     useEffect(() => {
       document.title = title;
@@ -24,10 +24,7 @@ import { Nav } from "./Nav.js";
     // nav bar is included in the header (they will always appear together)
     
     return html`
-      <header>
-        <h1 style=${mystyle}>${title} <i class="fas fa-seedling"></i></h1>
-        <${Nav}> </${Nav}>
-      </header>
+      <h1 style=${mystyle}>${title} <i class="fas fa-seedling"></i></h1>
     `;
   }
   

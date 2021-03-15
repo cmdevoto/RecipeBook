@@ -2,6 +2,10 @@ import {
     html
 } from "https://unpkg.com/htm/preact/standalone.module.js";
 
+// Nav is the parent component for child Header
+
+import { Header } from "./Header.js";
+
 export function Nav(){
 
     // css styling
@@ -22,10 +26,16 @@ export function Nav(){
 
     // currently only have "back to homepage" -- refers to index.html
     // will add other nav options in future features
+    // includes the header for the webpage
     
     return html `
-        <ul style=${navStyle}>
-            <li style=${navStyle2}> <a href="../../index.html">Back to Homepage</a> </li>
-        </ul>
+        <header>
+            <${Header} title="My Recipe Book"> 
+            Welcome to your recipe booklet
+            </${Header}>
+            <ul style=${navStyle}>
+                <li style=${navStyle2}> <a href="../../index.html">Back to Homepage</a> </li>
+            </ul>
+    </header>
     `
 }
