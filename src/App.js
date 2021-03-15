@@ -13,7 +13,6 @@ import { Recipe } from "./components/Recipe.js";
 function getRecipes() {
   const axios = window.axios;
   return axios.get("src/recipes.json").then((response) => {
-    //console.log(response.data.recipes);
     return response.data.recipes;
   });
 }
